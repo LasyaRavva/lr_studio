@@ -36,8 +36,8 @@ export default function Hero() {
         {studio.availability && <p className="hero__status"><span className="pulse" /> {studio.availability}</p>}
         <p className="hero__kicker">Duo portfolio · freelance web developers</p>
         <h1 className="hero__title">
-          <span className="hero__a">{team[0].first}</span>
-          <span className="hero__amp">&amp;</span>
+          <span className="hero__a">{team[0].first}</span>{' '}
+          <span className="hero__amp">&amp;</span>{' '}
           <span className="hero__b">{team[1].first}</span>
         </h1>
         <p className="hero__lede">

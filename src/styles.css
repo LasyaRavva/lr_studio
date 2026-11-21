@@ -587,3 +587,8 @@ a.ig__btn { text-decoration: none; }
   .steps__n { position: absolute; left: 0; top: 0; }
   .steps h3 { margin-top: 0; }
 }
+
+/* Safari: older versions need the -webkit- prefix for blurred backgrounds */
+.nav { -webkit-backdrop-filter: blur(12px); }
+.modal__back { -webkit-backdrop-filter: blur(4px); }
+.nav__scrim { -webkit-backdrop-filter: blur(3px); }

@@ -44,7 +44,15 @@ function siteMeta(env) {
   const pages = ['', 'privacy', 'terms', 'refunds', 'cookies']
   return {
     name: 'site-meta',
+    configResolved(cfg) {
+      if (cfg.command === 'build' && !site) {
+        cfg.logger.warn('\n  WARNING: VITE_SITE_URL is not set. This build will have NO sitemap.xml, no canonical link and no social-preview URL.\n  PowerShell:  $env:VITE_SITE_URL="https://your-address"; npm run build\n')
+      }
+    },
     transformIndexHtml(html) {
+      // Optional: Google Search Console "HTML tag" verification. Put the code in .env as VITE_GOOGLE_VERIFICATION.
+      const gsc = (env.VITE_GOOGLE_VERIFICATION || '').replace(/[^A-Za-z0-9_-]/g, '')
+      if (gsc) html = html.replace('</head>', `  <meta name="google-site-verification" content="${gsc}" />\n  </head>`)
       return html.replace(/<!--site-start-->([\s\S]*?)<!--site-end-->/, (_, inner) => {
         if (!site) return ''
         const ld = {

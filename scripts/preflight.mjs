@@ -74,6 +74,19 @@ else ok(`Site URL: ${process.env.VITE_SITE_URL}`)
 if (!process.env.LLM_API_KEY && !process.env.ANTHROPIC_API_KEY) warn('No AI key in this environment. That is fine locally, but add LLM_API_KEY (or ANTHROPIC_API_KEY) on Vercel, set a spending limit with the provider, then test the assistant on the live site.')
 else ok('AI key found in this environment')
 
+// ---- the built site (dist) ----
+if (has('dist/index.html')) {
+  const built = readFileSync(resolve(root, 'dist/index.html'), 'utf8')
+  if (has('dist/sitemap.xml')) ok('dist has sitemap.xml')
+  else fail('dist/sitemap.xml is missing: rebuild with VITE_SITE_URL set (PowerShell: $env:VITE_SITE_URL="https://your-address"; npm run build)')
+  if (built.includes('rel="canonical"')) ok('dist has a canonical link and social-preview URL')
+  else fail('dist has no canonical link: rebuild with VITE_SITE_URL set')
+  if (has('dist/robots.txt') && has('dist/404.html') && has('dist/privacy/index.html')) ok('dist has robots.txt, 404 page and policy pages')
+  else fail('dist is missing robots.txt, 404.html or the policy pages: rebuild')
+} else {
+  warn('No dist folder yet. Run the build (with VITE_SITE_URL set), then run this check again before uploading.')
+}
+
 // ---- report ----
 const show = (tag, list) => list.forEach((m) => console.log(`${tag} ${m}`))
 console.log('\nLaunch check\n')
