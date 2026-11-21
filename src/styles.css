@@ -252,7 +252,7 @@ h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 700; }
 .addon p:last-of-type { font-size: .88rem; color: var(--mist); }
 .addon__try { margin-top: .8rem; font: 600 .85rem var(--body); color: var(--ink); background: var(--aqua); border: 0; border-radius: 999px; padding: .45rem 1rem; cursor: pointer; transition: transform .2s; }
 .addon__try:hover { transform: translateY(-2px); }
-.pricing__note { margin-top: 1.4rem; font-size: .85rem; color: var(--mist); max-width: 75ch; }
+.pricing__note { margin-top: 1.4rem; font-size: .90rem; color: var(--mist); max-width: 160ch; }
 
 /* process */
 .steps { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1.5rem; }

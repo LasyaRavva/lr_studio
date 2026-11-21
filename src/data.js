@@ -13,13 +13,13 @@ export const studio = {
   // falls back to opening the visitor's email app.
   emailjs: { serviceId: 'service_wlfhtwf', templateId: 'template_5jhquch', publicKey: 'w0KFku65JPh8SohBp' },
   formEndpoint: '/api/enquiry',
-  location: 'Andhra Pradesh & Telangana, India · working with clients worldwide',
+  location: 'India · working with clients worldwide',
   // Shown in the hero and chat. Set to '' to hide it. Only keep it if it is true.
   availability: 'Taking on new projects',
 
   // ── Business details (shown in the footer and legal pages) ──
-  legalName: 'Lasya Ravva and Koushik (freelance web developers)',
-  address: 'Andhra Pradesh and Telangana, India', // TODO: city, state, country (e.g. 'Hyderabad, Telangana, India')
+  legalName: 'LR_STUDIO',
+  address: '', // TODO: city, state, country (e.g. 'Hyderabad, Telangana, India')
   gstin: '', // TODO: add only if you are GST-registered
   courtCity: '', // TODO: city whose courts apply in the Terms, e.g. 'Hyderabad'
 
@@ -156,26 +156,48 @@ export const process = [
 ]
 
 // ── Pricing ── adjust the numbers to whatever you decide to charge.
+// ── Pricing ── adjust the numbers to whatever you decide to charge.
 export const packages = [
   {
-    id: 'starter', name: 'Starter page', price: '₹10,000 – 15,000', time: '5–7 days', accent: '#ffd166',
-    fit: 'A simple online presence or personal page.',
-    includes: ['One page with 3–5 sections', 'Mobile-ready design', 'Contact form and WhatsApp link', 'Deployed on a live link'],
+    id: 'starter', name: 'Starter page', price: 'from ₹10,000', time: '5–7 days', accent: '#ffd166',
+    fit: 'A clean, fast online presence for individuals or local shops.',
+    includes: [
+      'One page (3–5 sections)',
+      'Mobile-ready design',
+      'Contact form and WhatsApp button',
+      'Deployed on a live link',
+      '1 round of revisions',
+    ],
   },
   {
-    id: 'landing', name: 'Landing page', price: '₹15,000 – 25,000', time: '1–2 weeks', accent: '#ff6b95',
-    fit: 'One page built to get enquiries for an offer or campaign.',
-    includes: ['Custom design for your brand', 'Enquiry form and WhatsApp button', 'Basic SEO and analytics', '2 rounds of revisions'],
+    id: 'landing', name: 'Landing page', price: 'from ₹18,000', time: '1–2 weeks', accent: '#ff6b95',
+    fit: 'One custom-designed page built to convert ads or offers into leads.',
+    includes: [
+      'Custom UI design for your brand',
+      'Enquiry form and WhatsApp button',
+      'Basic SEO and analytics setup',
+      '2 rounds of revisions',
+    ],
   },
   {
-    id: 'business', name: 'Business website', price: '₹30,000 – 55,000', time: '2–3 weeks', accent: '#45e0dc',
-    fit: 'Local businesses that need several pages and to be found on Google.',
-    includes: ['5–8 pages (services, gallery, about, contact)', 'Google Maps and WhatsApp', 'SEO basics and speed tuning', '2 rounds of revisions'],
+    id: 'business', name: 'Business website', price: 'from ₹30,000', time: '2–3 weeks', accent: '#45e0dc',
+    fit: 'Local businesses that need multiple pages and to be found on Google.',
+    includes: [
+      'Up to 6 pages (services, gallery, about, contact)',
+      'Google Maps and WhatsApp integration',
+      'On-page SEO and speed tuning',
+      '2 rounds of revisions',
+    ],
   },
   {
-    id: 'pro', name: 'Business Pro', price: '₹75,000 – 1,50,000', time: '4–6 weeks', accent: '#8f87ff',
-    fit: 'Businesses that want bookings or enquiries managed online.',
-    includes: ['Everything in Business website', 'Booking or enquiry system', 'Simple admin panel', 'Email notifications'],
+    id: 'pro', name: 'Business Pro', price: 'from ₹75,000', time: '4–6 weeks', accent: '#8f87ff',
+    fit: 'Businesses that want bookings, orders, or enquiries managed online.',
+    includes: [
+      'Everything in Business website',
+      'Booking or enquiry management system',
+      'Admin panel & email notifications',
+      '2 rounds of revisions',
+    ],
   },
 ]
 
@@ -187,13 +209,12 @@ export const customApp = {
 }
 
 export const addons = [
-  { name: 'AI chat assistant', price: '₹10,000 – 30,000', text: 'A chat helper on your site that answers visitor questions and collects leads.', action: 'assistant' },
-  { name: 'Monthly maintenance', price: '₹1,500 – 5,000 / month', text: 'Updates, backups, small fixes and uptime checks.' },
-  { name: 'Extra pages', price: '₹2,000 – 4,000 each', text: 'More pages after launch, designed to match.' },
+  { name: 'AI chat assistant', price: 'from ₹12,000', text: 'A chat helper on your site that answers visitor questions and collects leads.', action: 'assistant' },
+  { name: 'Monthly maintenance', price: 'from ₹2,000 / month', text: 'Content updates, backups, small fixes and uptime checks.' },
+  { name: 'Extra pages', price: 'from ₹2,500 each', text: 'Additional pages after launch, designed to match your site.' },
 ]
 
-export const pricingNote = 'Prices are starting ranges in Indian rupees, before GST if it applies. We give a fixed written quote after a short call, so there are no surprise charges. Domain, hosting and paid third-party tools are billed at cost and agreed with you first. Payment: 50% to start, 30% midway, 20% at launch.'
-
+export const pricingNote = 'All prices are starting figures in INR (excluding GST, if applicable)—final quotes depend on page count, custom integrations, and content readiness, with a fixed written estimate before we start. Domain, hosting, and paid third-party tools are billed at actuals in your name. Payment: 50% to start, 30% midway, 20% at launch.'
 export const assistantChips = ['What do you charge?', 'How long does a website take?', 'Can you add an AI assistant to my site?']
 
 // ── FAQ ── These answers state your working terms. Edit them so they match what you really do.
