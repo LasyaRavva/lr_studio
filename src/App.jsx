@@ -64,7 +64,7 @@ export default function App() {
   // Legal pages open at the top; going back to a section scrolls to it once it is on screen.
   useEffect(() => {
     if (page) { window.scrollTo(0, 0); document.title = `${legalPages[page].title} | Lasya & Koushik`; return }
-    document.title = 'Duo Portfolio | Lasya & Koushik: Freelance Web Developers (React & Full-Stack)'
+    document.title = 'Duo Portfolio | Lasya & Koushik, Freelance Web Developers'
     const id = window.location.hash
     if (id && id.length > 1) requestAnimationFrame(() => document.querySelector(id)?.scrollIntoView())
     else window.scrollTo(0, 0)
